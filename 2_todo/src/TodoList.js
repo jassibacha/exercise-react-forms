@@ -22,9 +22,9 @@ const TodoList = () => {
     };
 
     const deleteTodo = (todoId) => {
-        // Run setBoxes again
+        // Run setTodos again
         setTodos((todos) =>
-            // Filter the boxes array from state
+            // Filter the todos array from state
             todos.filter((todo) => {
                 // If the ID matches, remove it!
                 return todo.id !== todoId;
@@ -32,7 +32,7 @@ const TodoList = () => {
         );
     };
 
-    /** Add new item object to cart. */
+    /** Add new todo to list. */
     const addTodo = (todo) => {
         let newTodo = { ...todo, id: uuid() };
         setTodos((todos) => [...todos, newTodo]);

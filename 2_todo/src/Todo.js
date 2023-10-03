@@ -4,7 +4,7 @@ import './Todo.css';
 const Todo = ({ task, id, deleteTodo }) => {
     return (
         <div className="Todo" key={id}>
-            {task}
+            <div class="Todo-task">{task}</div>
             <button className="delete" onClick={deleteTodo}>
                 X
             </button>
